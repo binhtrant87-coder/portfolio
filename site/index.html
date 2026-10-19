@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Binh Tran Thanh — Automotive Software Delivery Leader &amp; Expert Advisor</title>
+  <meta name="description" content="Business Unit Head and expert advisor for automotive embedded software. Scaling engineering teams across ADAS, SDV, AI, EV, Autosar, RTOS and Linux platforms.">
+
+  <!-- ========== SECTION: SEO-META (OG tags, JSON-LD) ========== -->
+  <meta name="theme-color" content="#FFEE58">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Binh Tran Thanh — Automotive Software Delivery Leader">
+  <meta property="og:description" content="Expert advisor for automotive embedded software. Leading a 650-person team led across Hanoi and Da Nang, 15-year key customer partnership, ADAS, SDV, AI and EV software.">
+  <meta name="twitter:card" content="summary">
+  <!-- TODO after you buy a domain: add <link rel="canonical" href="https://YOUR-DOMAIN/"> and <meta property="og:image" content="https://YOUR-DOMAIN/assets/img/og-image.png"> (1200x630) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23503AA8'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='%23FFEE58'%3EBT%3C/text%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Binh Tran Thanh",
+    "jobTitle": "Business Unit Head and Expert Advisor, Automotive Embedded Software",
+    "address": { "@type": "PostalAddress", "addressLocality": "Hanoi", "addressCountry": "VN" },
+    "email": "mailto:binhtran.t87os@gmail.com",
+    "sameAs": ["https://www.linkedin.com/in/binhtrant87"],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Vietnam National University, Hanoi" },
+    "knowsAbout": ["Automotive embedded software", "ADAS", "Software-Defined Vehicle", "AI", "Electric Vehicle", "Autosar", "RTOS", "Linux BSP", "Program management", "Team scaling"]
+  }
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- ========== SECTION: FONTS (Twenty Twenty-Five: Manrope + Fira Code) ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <!-- ========== SECTION: STYLES ========== -->
+  <style>
+    /* =====================================================
+       THEME: Twenty Twenty-Five (WordPress default theme, 2025)
+       Palette = theme.json presets · Fonts = Manrope + Fira Code
+       ===================================================== */
+    :root {
+      /* theme.json palette */
+      --base: #FFFFFF;        /* Base */
+      --contrast: #111111;    /* Contrast */
+      --accent-1: #FFEE58;    /* yellow */
+      --accent-2: #F6CFF4;    /* pink */
+      --accent-3: #503AA8;    /* purple */
+      --accent-4: #686868;    /* grey */
+      --accent-5: #FBFAF3;    /* cream */
+      --accent-6: color-mix(in srgb, currentColor 20%, transparent);
+      /* tints derived from the palette for extra section tones */
+      --lavender: #EEEAFB;
+      --butter: #FFF8B8;
+
+      --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: "Fira Code", ui-monospace, Menlo, Consolas, monospace;
+      --max: 1200px;
+    }
+
+    /* ---------- Base (theme.json: weight 300, tight tracking) ---------- */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body {
+      margin: 0; background: var(--base); color: var(--contrast);
+      font-family: var(--sans); font-weight: 300; font-size: clamp(1rem, .95rem + .3vw, 1.2rem);
+      line-height: 1.5; letter-spacing: -.1px; -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-weight: 400; line-height: 1.125; letter-spacing: -.1px; margin: 0; }
+    a { color: currentColor; text-decoration: none; }
+    ul, ol { list-style: none; margin: 0; padding: 0; }
+    p { margin: 0; }
+    strong { font-weight: 600; }
+    em { font-style: normal; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(24px, 5vw, 50px); }
+    section[data-section] { padding: clamp(70px, 10vw, 130px) 0; }
+    h2 { font-size: clamp(1.9rem, 1.4rem + 2vw, 3rem); margin-bottom: clamp(32px, 5vw, 56px); max-width: 18ch; }
+    .eyebrow {  /* TT5 h6 style: small, bold, uppercase, tracked */
+      display: block; font-size: .875rem; font-weight: 700; letter-spacing: 1.4px;
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+
+    /* ---------- Buttons (TT5: dark filled + outline) ---------- */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 1rem 2.25rem;
+      font: 400 1rem/1 var(--sans); border: 1px solid var(--contrast); border-radius: 4px;
+      transition: background-color .2s, color .2s;
+    }
+    .btn-primary { background: var(--contrast); color: var(--base); }
+    .btn-primary:hover { background: color-mix(in srgb, var(--contrast) 85%, transparent); }
+    .btn-ghost { background: transparent; color: var(--contrast); }
+    .btn-ghost:hover { background: color-mix(in srgb, var(--contrast) 6%, transparent); }
+    .btn-sm { padding: .65rem 1.4rem; font-size: .95rem; }
+    a:focus-visible { outline: 2px solid var(--accent-4); outline-offset: 3px; }
+
+    /* ---------- skip-link ---------- */
+    .skip { position: absolute; left: -999px; top: 8px; background: var(--contrast); color: var(--base); padding: 8px 14px; z-index: 100; }
+    .skip:focus { left: 8px; }
+
+    /* ---------- site-nav — white ---------- */
+    #site-nav {
+      position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--accent-6);
+    }
+    #site-nav nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { font-weight: 700; letter-spacing: -.5px; font-size: 1.15rem; }
+    .brand:hover { text-decoration: underline; }
+    .nav-links { display: flex; align-items: center; gap: 30px; font-size: 1rem; }
+    .nav-links a:not(.btn):hover { text-decoration: underline; }
+
+    /* ---------- hero — YELLOW (accent-1) ---------- */
+    #hero { background: var(--accent-1); }
+    #hero .wrap { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(30px, 6vw, 80px); align-items: center; }
+    #hero .name { font-size: .875rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 22px; }
+    #hero h1 { font-size: clamp(2.4rem, 1.4rem + 4.6vw, 4.9rem); font-weight: 300; letter-spacing: -1.5px; line-height: 1.04; margin-bottom: 28px; }
+    #hero h1 em { font-weight: 700; color: var(--accent-3); }
+    #hero .sub { font-size: 1.3rem; max-width: 34em; margin-bottom: 36px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+    .hero-meta { font-size: .95rem; font-weight: 400; }
+    .portrait-wrap { display: flex; justify-content: center; }
+    .portrait {
+      width: min(340px, 80%); aspect-ratio: 1; border-radius: 100px 100px 100px 0;  /* soft TT5-style blob */
+      display: grid; place-items: center; font-size: clamp(3.5rem, 8vw, 6rem); font-weight: 300;
+      background: var(--accent-3); color: var(--accent-1); margin: 0 auto;
+      object-fit: cover; object-position: center top; display: block; height: auto;
+      box-shadow: 14px 14px 0 var(--accent-3);  /* purple offset block behind the photo */
+    }
+    .portrait-wrap small { display: block; text-align: center; margin-top: 14px; font: 400 .8rem var(--mono); color: color-mix(in srgb, var(--contrast) 70%, transparent); }
+
+    /* ---------- proof-strip — CREAM (accent-5) ---------- */
+    #proof { background: var(--accent-5); }
+    #proof h2 { max-width: none; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.3rem); }
+    #proof h2 em { color: var(--accent-4); font-size: .7em; }
+    [data-block="performance-list"] { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    [data-block="performance-list"] li {
+      background: var(--base); border: 1px solid var(--accent-6); padding: 26px 26px 28px;
+      font-size: 1rem; line-height: 1.5;
+    }
+    [data-block="performance-list"] strong {
+      display: block; margin-bottom: 12px; font: 500 .8rem var(--mono);
+      letter-spacing: .5px; text-transform: uppercase; color: var(--accent-3);
+    }
+    [data-block="performance-list"] .big { font-weight: 700; color: var(--accent-3); }
+
+    /* ---------- offer — PINK (accent-2) ---------- */
+    #offer { background: var(--accent-2); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
+    .card { background: var(--base); padding: 38px 32px 40px; border-radius: 4px; transition: transform .25s; }
+    .card:hover { transform: translateY(-4px); }
+    .card .num { font: 500 .85rem var(--mono); color: var(--accent-3); }
+    .card h3 { font-size: 1.6rem; margin: 18px 0 14px; }
+    .card p { font-size: 1rem; color: var(--accent-4); }
+
+    /* ---------- outcomes — PURPLE (accent-3) ---------- */
+    #outcomes { background: var(--accent-3); color: var(--base); }
+    #outcomes .eyebrow { color: var(--accent-1); }
+    .outcome-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 1px solid rgba(255,255,255,.3); }
+    .outcome { padding: 32px 28px 36px 0; border-bottom: 1px solid rgba(255,255,255,.3); }
+    .outcome h3 { font-size: 1.45rem; color: var(--accent-1); margin-bottom: 12px; }
+    .outcome p { font-size: 1rem; color: rgba(255,255,255,.82); }
+
+    /* ---------- credentials — WHITE (base) ---------- */
+    #credentials { background: var(--base); }
+    .cred-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(28px, 4vw, 56px); }
+    .cred h3 { font: 700 .875rem var(--sans); letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--accent-1); display: inline-block; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip { padding: 9px 18px; border-radius: 50px; background: var(--accent-5); border: 1px solid var(--accent-6); font-size: .95rem; font-weight: 400; }
+    .cred p { margin-bottom: 6px; font-size: 1rem; }
+    .cred p em { color: var(--accent-4); }
+
+    /* ---------- experience — LAVENDER (tint of accent-3) ---------- */
+    #experience { background: var(--lavender); }
+    .timeline { max-width: 780px; border-left: 2px solid var(--accent-3); margin-left: 8px; }
+    .timeline li { position: relative; padding: 0 0 30px 34px; }
+    .timeline li::before { content: ""; position: absolute; left: -9px; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent-1); border: 2px solid var(--accent-3); }
+    .timeline .when { display: block; font: 500 .85rem var(--mono); color: var(--accent-3); margin-bottom: 4px; }
+    .timeline .role { display: block; font-size: 1.4rem; font-weight: 400; }
+    .timeline .org { color: var(--accent-4); font-size: .95rem; }
+
+    /* ---------- toolbox — BUTTER (tint of accent-1) ---------- */
+    #toolbox { background: var(--butter); }
+    .tags { display: flex; flex-wrap: wrap; gap: 12px; }
+    .tags li { padding: 10px 18px; background: var(--base); border: 1px solid var(--contrast); font: 400 .9rem var(--mono); transition: background-color .2s, color .2s; }
+    .tags li:hover { background: var(--contrast); color: var(--accent-1); }
+
+    /* ---------- contact — BLACK (contrast) ---------- */
+    #contact { background: var(--contrast); color: var(--base); text-align: center; }
+    #contact h2 { max-width: none; font-size: clamp(2.4rem, 1.4rem + 4vw, 4.5rem); font-weight: 300; letter-spacing: -1.2px; margin-bottom: 22px; }
+    #contact p { max-width: 30em; margin: 0 auto 38px; font-size: 1.25rem; color: rgba(255,255,255,.72); }
+    #contact .btn-primary { background: var(--accent-1); color: var(--contrast); border-color: var(--accent-1); font-size: 1.15rem; padding: 1.2rem 2.8rem; }
+    #contact .btn-primary:hover { background: var(--accent-2); border-color: var(--accent-2); }
+    .contact-meta { margin-top: 40px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: .95rem; color: rgba(255,255,255,.6); }
+    .contact-meta a:hover { color: var(--accent-1); text-decoration: underline; }
+
+    /* ---------- footer — CREAM ---------- */
+    #footer { background: var(--accent-5); color: var(--accent-4); font-size: .875rem; padding: 28px 0; text-align: center; }
+
+    /* ---------- scroll reveal (only when JS is on) ---------- */
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- earlier-roles disclosure ---------- */
+    details.more { max-width: 780px; margin: 0 0 0 8px; }
+    details.more summary {
+      cursor: pointer; list-style: none; display: inline-block; margin: 0 0 28px 0;
+      padding: .7rem 1.4rem; border: 1px solid var(--contrast); border-radius: 4px; font-weight: 400; font-size: .95rem;
+    }
+    details.more summary::-webkit-details-marker { display: none; }
+    details.more summary:hover { background: var(--contrast); color: var(--lavender); }
+    details.more[open] summary { margin-bottom: 28px; }
+    details.more .timeline { margin-left: 0; }
+
+    /* ---------- mobile menu toggle ---------- */
+    .menu-toggle { display: none; background: none; border: 1px solid var(--contrast); border-radius: 4px; padding: .55rem .9rem; font: 400 .95rem var(--sans); cursor: pointer; }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 860px) {
+      #hero .wrap { grid-template-columns: 1fr; }
+      .portrait-wrap { order: -1; justify-content: flex-start; }
+      .portrait-wrap > div { width: 170px; }
+      .portrait { width: 170px; font-size: 3rem; margin: 0; }
+      .menu-toggle { display: inline-block; }
+      .nav-links {
+        display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; align-items: flex-start;
+        gap: 18px; padding: 24px clamp(24px, 5vw, 50px); background: var(--base); border-bottom: 1px solid var(--accent-6);
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+      .card, .tags li { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== SECTION: SKIP-LINK ========== -->
+  <a data-section="skip-link" class="skip" href="#main">Skip to content</a>
+
+  <!-- ========== SECTION: SITE-NAV (sticky; anchors + persistent Email CTA) ========== -->
+  <header data-section="site-nav" id="site-nav">
+    <nav class="wrap" aria-label="Primary">
+      <a class="brand" href="#hero">Binh Tran Thanh</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#offer">Offer</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary btn-sm" href="mailto:binhtran.t87os@gmail.com?subject=Advisory%20inquiry">Email me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== SECTION: HERO (0–5s: who + what + for whom) ========== -->
+    <section data-section="hero" id="hero">
+      <div class="wrap">
+        <div>
+          <h1>Delivery leader for <em>automotive embedded software.</em></h1>
+          <p class="sub"><span data-years>17</span>+ years leading and scaling engineering teams in automotive software, from Autosar and RTOS to ADAS and SDV. Open to expert advisory and consulting engagements alongside my leadership role.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:binhtran.t87os@gmail.com?subject=Advisory%20inquiry">Email me &rarr;</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/binhtrant87" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-ghost" href="assets/Binh-Tran-Thanh-CV.pdf" download>Download CV</a>
+          </div>
+          <div class="hero-meta">Hanoi &amp; Da Nang, Vietnam &nbsp;·&nbsp; Building engineering teams in Vietnam</div>
+        </div>
+        <div class="portrait-wrap">
+          <div>
+            <!-- To use a photo: replace the div below with <img class="portrait" src="assets/img/headshot.webp" alt="Portrait of Binh Tran Thanh" width="340" height="340" style="object-fit:cover"> -->
+            <img class="portrait" src="assets/img/headshot.webp" alt="Portrait of Binh Tran Thanh" width="340" height="340" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION: PROOF-STRIP (5–15s: last-3-years performance list) ========== -->
+    <section data-section="proof-strip" id="proof">
+      <div class="wrap">
+        <h2>Last 3 years at a glance <em>(Oct 2023 – Oct 2026)</em></h2>
+        <ul data-block="performance-list">
+          <li data-item="scale">
+            <strong>Scale</strong>
+            Led a Business Unit of <b class="big"><span data-count="650">650</span></b> professionals delivering management, development and testing for automotive embedded software (Sep 2023 – present).
+          </li>
+          <li data-item="customer">
+            <strong>Customer</strong>
+            Sustained the largest account in the portfolio, a <b class="big"><span data-count="15">15</span>-year</b> partnership, as Business Unit Head.
+          </li>
+          <li data-item="multi-site">
+            <strong>Multi-site</strong>
+            Ran <b class="big"><span data-count="2">2</span> sites</b> at once, Hanoi and Da Nang, while focusing on building the team in Vietnam.
+          </li>
+          <li data-item="recognition">
+            <strong>Recognition</strong>
+            Honored as <b class="big">FPT Team Manager of the Year</b> and named to the <b class="big">TOP 100 FPT Software</b>.
+          </li>
+          <li data-item="certified">
+            <strong>Certified</strong>
+            Kept delivery standards current with <b class="big"><span data-count="5">5</span> certifications</b>: PMI-ACP®, Scrum Master I, ISTQB, miniMBA, PMF.
+          </li>
+          <li data-item="domain-depth">
+            <strong>Domain depth</strong>
+            <b class="big"><span data-count="17" data-years>17</span>+ years</b> across Autosar, RTOS, Linux BSP and ISO 26262 / TS 16949 process compliance.
+          </li>
+          <!-- OPTIONAL, add when you have real figures (do not publish estimates):
+          <li data-item="growth"><strong>Growth</strong> headcount / revenue / new accounts 2023→2026</li>
+          <li data-item="delivery-quality"><strong>Delivery quality</strong> on-time %, defect rate, customer satisfaction</li>
+          <li data-item="retention"><strong>People</strong> attrition, promotions, hires</li>
+          -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== SECTION: OFFER (15–30s: what I do) ========== -->
+    <section data-section="offer" id="offer">
+      <div class="wrap">
+        <span class="eyebrow">Advisory</span>
+        <h2>Where I can advise</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="num">01</span>
+            <h3>Delivery &amp; program advisory</h3>
+            <p>Review and strengthen how programs are run: planning, SOW management, risk and issue handling, quality gates and stakeholder reporting.</p>
+          </article>
+          <article class="card">
+            <span class="num">02</span>
+            <h3>Engineering team scaling</h3>
+            <p>Practical guidance on building and growing teams in Vietnam: hiring, career paths, allocation, retention and capability development.</p>
+          </article>
+          <article class="card">
+            <span class="num">03</span>
+            <h3>Automotive software expertise</h3>
+            <p>Expert input on Autosar, RTOS, Linux BSP / Yocto, ADAS, SDV, AI and EV software, with ISO 26262 and TS 16949 process compliance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION: OUTCOMES (selected results) ========== -->
+    <section data-section="outcomes" id="outcomes">
+      <div class="wrap">
+        <span class="eyebrow">Track record</span>
+        <h2>Selected outcomes</h2>
+        <div class="outcome-grid">
+          <article class="outcome">
+            <h3>650-person business unit</h3>
+            <p>Led delivery for a 15-year key customer partnership in automotive embedded software.</p>
+          </article>
+          <article class="outcome">
+            <h3>Domain growth, 60+ people</h3>
+            <p>Expanded a Vision, Radar and OS domain in size and mastery as Line Manager (2017–2022).</p>
+          </article>
+          <article class="outcome">
+            <h3>30+ person BSP / RTOS projects</h3>
+            <p>Managed Linux BSP and RTOS programs for automotive operating-system frameworks.</p>
+          </article>
+          <article class="outcome">
+            <h3>Autosar MCAL maintenance team</h3>
+            <p>Technical lead of a 10-person team maintaining the Autosar MCAL product.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION: CREDENTIALS (certs, awards, education) ========== -->
+    <section data-section="credentials" id="credentials">
+      <div class="wrap">
+        <span class="eyebrow">Proof</span>
+        <h2>Credentials</h2>
+        <div class="cred-grid">
+          <div class="cred" data-block="certifications">
+            <h3>Certifications</h3>
+            <div class="chips">
+              <span class="chip">PMI-ACP®</span><span class="chip">Professional Scrum Master I</span>
+              <span class="chip">ISTQB</span><span class="chip">miniMBA</span><span class="chip">PMF</span>
+            </div>
+          </div>
+          <div class="cred" data-block="awards">
+            <h3>Awards</h3>
+            <div class="chips">
+              <span class="chip">FPT Team Manager of the Year</span><span class="chip">TOP 100 FPT Software</span>
+            </div>
+          </div>
+          <div class="cred" data-block="education">
+            <h3>Education</h3>
+            <p><strong>B.Eng., Electrical, Electronic &amp; Communications Technology</strong></p>
+            <p><em>Vietnam National University, Hanoi · 2005–2009</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION: EXPERIENCE (compact timeline) ========== -->
+    <section data-section="experience" id="experience">
+      <div class="wrap">
+        <span class="eyebrow">Career</span>
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li><span class="when">2023 – Present</span><span class="role">Business Unit Head</span><span class="org">FPT Automotive · Hanoi &amp; Da Nang · 650 professionals, automotive embedded software</span></li>
+          <li><span class="when">2017 – 2022</span><span class="role">Line Manager</span><span class="org">FPT Software · Hanoi · domain operations, hiring, customer trust</span></li>
+        </ol>
+        <details class="more">
+          <summary>Show earlier roles</summary>
+          <ol class="timeline">
+            <li><span class="when">From 2022</span><span class="role">Business Unit Lead, GAM Philippines</span><span class="org">FPT Software · Philippines</span></li>
+            <li><span class="when">2015 – 2022</span><span class="role">Project Manager</span><span class="org">FPT Software · Hanoi · 30+ person Linux BSP / RTOS projects</span></li>
+            <li><span class="when">2012 – 2015</span><span class="role">Autosar MCAL Technical Lead</span><span class="org">FPT Software · Vietnam · 10-person maintenance team</span></li>
+            <li><span class="when">2009 – 2013</span><span class="role">Developer / Tester</span><span class="org">FPT Software · Vietnam · MQX RTOS, Zigbee firmware</span></li>
+          </ol>
+        </details>
+      </div>
+    </section>
+
+    <!-- ========== SECTION: TOOLBOX (keyword tags) ========== -->
+    <section data-section="toolbox" id="toolbox">
+      <div class="wrap">
+        <span class="eyebrow">Skills</span>
+        <h2>Toolbox</h2>
+        <ul class="tags">
+          <li>ADAS</li><li>SDV (Software-Defined Vehicle)</li><li>AI / Machine Learning</li><li>EV (Electric Vehicle)</li>
+          <li>Vision &amp; Radar</li><li>Yocto</li><li>Jenkins CI</li><li>Autosar</li><li>FreeRTOS</li><li>Jira</li>
+          <li>Bitbucket</li><li>Linux BSP</li><li>Device drivers</li><li>Agile</li><li>ISO 26262</li>
+          <li>TS 16949</li><li>C</li><li>Python</li><li>Shell</li><li>Open-source licensing</li>
+          <li>BlackDuck</li><li>Coverity</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== SECTION: CONTACT (primary CTA: email) ========== -->
+    <section data-section="contact" id="contact">
+      <div class="wrap">
+        <h2>Need an expert view?</h2>
+        <p>Facing a delivery, team-scaling or technology question in automotive software? Send me a note and we can see if I can help.</p>
+        <a class="btn btn-primary" href="mailto:binhtran.t87os@gmail.com?subject=Advisory%20inquiry">Email me &rarr;</a>
+        <div class="contact-meta">
+          <a href="https://www.linkedin.com/in/binhtrant87" target="_blank" rel="noopener">LinkedIn</a>
+          <span>Hanoi, Vietnam</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== SECTION: FOOTER ========== -->
+  <footer data-section="footer" id="footer">
+    <div class="wrap">© <span data-year-now>2026</span> · Hanoi &amp; Da Nang, Vietnam</div>
+  </footer>
+
+  <!-- ========== SECTION: SCRIPTS (menu toggle, scroll reveal, count-up) ========== -->
+  <script>
+    (function () {
+      // Dynamic years: current year - 2009 (career start)
+      var now = new Date().getFullYear(), yrs = now - 2009;
+      document.querySelectorAll('[data-years]').forEach(function (el) {
+        el.textContent = yrs;
+        if (el.hasAttribute('data-count')) el.setAttribute('data-count', yrs);
+      });
+      document.querySelectorAll('[data-year-now]').forEach(function (el) { el.textContent = now; });
+
+      // Mobile menu
+      var toggle = document.querySelector('.menu-toggle');
+      var links = document.getElementById('nav-links');
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+      });
+      links.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+      });
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Scroll reveal
+      var targets = document.querySelectorAll(
+        'section[data-section] .wrap > *, [data-block="performance-list"] li, .card, .outcome, .cred, .timeline li'
+      );
+      targets.forEach(function (el) { el.classList.add('reveal'); });
+      if (!('IntersectionObserver' in window) || reduce) {
+        targets.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+
+      // Count-up
+      function countUp(el) {
+        if (el.dataset.done) return;
+        el.dataset.done = '1';
+        var end = parseInt(el.getAttribute('data-count'), 10), start = null, dur = 1200;
+        function step(ts) {
+          if (start === null) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        }
+        el.textContent = '0';
+        requestAnimationFrame(step);
+      }
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add('in');
+          en.target.querySelectorAll('[data-count]').forEach(countUp);
+          io.unobserve(en.target);
+        });
+      }, { threshold: 0.12 });
+      targets.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>
